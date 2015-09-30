@@ -131,21 +131,21 @@ module.exports = {
     });
   },
   
-  'Wordnik#related': function() {
+  'Wordnik#relatedWords': function() {
     var wn = new Wordnik(options);
     
-    wn.related('test', function(e, related) {
+    wn.relatedWords('test', function(e, relatedWords) {
       assert.isNull(e);
-      assert.isNotNull(related);
+      assert.isNotNull(relatedWords);
     });
   },
   
   'Wordnik#phrases': function() {
     var wn = new Wordnik(options);
     
-    wn.phrases('test', function(e, related) {
+    wn.phrases('test', function(e, phrases) {
       assert.isNull(e);
-      assert.isNotNull(related);
+      assert.isNotNull(phrases);
     });
   },
   
